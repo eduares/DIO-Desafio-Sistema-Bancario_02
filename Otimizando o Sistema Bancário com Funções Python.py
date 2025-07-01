@@ -104,18 +104,18 @@ def Extrato(saldo, *, demonstrativo):
     print(f'Saldo: R$ {saldo:.2f}')
 
 def criar_usuário(lista_usuario):
-    cpf = input("Informe o CPF (somente números): ").strip()
+    cpf = input("Informe o CPF (somente números): ")
     if any(usuario["cpf"] == cpf for usuario in lista_usuario):
         print("Já existe usuário com esse CPF!")
         return
 
     nome = input("Insira o seu nome completo: ").strip()
-    nascimento = input("Data de nascimento (dd/mm/aaaa): ").strip()
-    logradouro = input("Logradouro: ").strip()
-    numero = input("Número: ").strip()
-    bairro = input("Bairro: ").strip()
-    cidade = input("Cidade: ").strip()
-    estado = input("Estado (sigla): ").strip()
+    nascimento = input("Data de nascimento (dd/mm/aaaa): ")
+    logradouro = input("Logradouro: ")
+    numero = input("Número: ")
+    bairro = input("Bairro: ")
+    cidade = input("Cidade: ")
+    estado = input("Estado (sigla): ")
 
     endereco = f"{logradouro}, {numero} - {bairro} - {cidade}/{estado}"
     usuario = {"nome": nome, "nascimento": nascimento, "cpf": cpf, "endereco": endereco}
@@ -123,7 +123,7 @@ def criar_usuário(lista_usuario):
     print("Usuário criado com sucesso!")
 
 def criar_conta_corrente(lista_usuarios, lista_contas):
-    cpf = input("Informe o CPF (somente números): ").strip()
+    cpf = input("Informe o CPF (somente números): ")
     usuario_encontrado = None
     for usuario in lista_usuarios:
         if usuario["cpf"] == cpf:
